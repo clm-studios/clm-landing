@@ -29,11 +29,10 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
       background: radial-gradient(ellipse at 30% 20%, #1a1440 0%, var(--deep) 60%, #050510 100%);
       color: var(--soft-white);
       font-family: 'Inter', sans-serif;
-      overflow: hidden;
+      overflow-x: hidden;
       position: relative;
     }
 
@@ -63,6 +62,7 @@
       z-index: 1;
       text-align: center;
       padding: 2rem;
+      padding-top: 20vh;
       max-width: 640px;
     }
 
@@ -153,11 +153,119 @@
       50%      { border-color: rgba(124, 92, 191, 0.6);  box-shadow: 0 0 20px 0 rgba(124, 92, 191, 0.1); }
     }
 
+    /* --- About Us --- */
+    .about {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 800px;
+      padding: 4rem 2rem 3rem;
+      text-align: center;
+    }
+
+    .about-heading {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      font-weight: 700;
+      color: var(--glow-purple);
+      margin-bottom: 0.5rem;
+    }
+
+    .about-sub {
+      font-size: clamp(0.85rem, 2vw, 1rem);
+      font-weight: 300;
+      color: rgba(232, 234, 246, 0.5);
+      margin-bottom: 3rem;
+    }
+
+    .about-cards {
+      display: flex;
+      gap: 2rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .about-card {
+      flex: 1 1 280px;
+      max-width: 340px;
+      background: rgba(18, 18, 42, 0.6);
+      border: 1px solid rgba(124, 92, 191, 0.2);
+      border-radius: 1.25rem;
+      padding: 2.5rem 2rem 2rem;
+      backdrop-filter: blur(12px);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .about-card:hover {
+      border-color: rgba(124, 92, 191, 0.5);
+      box-shadow: 0 0 30px rgba(124, 92, 191, 0.1);
+    }
+
+    .about-card.star-card:hover {
+      border-color: rgba(244, 200, 66, 0.4);
+      box-shadow: 0 0 30px rgba(244, 200, 66, 0.08);
+    }
+
+    .about-card.moon-card:hover {
+      border-color: rgba(212, 223, 247, 0.4);
+      box-shadow: 0 0 30px rgba(212, 223, 247, 0.08);
+    }
+
+    .about-portrait {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin: 0 auto 1.5rem;
+      display: block;
+    }
+
+    .star-card .about-portrait {
+      border: 2px solid var(--star-gold);
+      box-shadow: 0 0 20px rgba(244, 200, 66, 0.2);
+    }
+
+    .moon-card .about-portrait {
+      border: 2px solid var(--moon-silver);
+      box-shadow: 0 0 20px rgba(212, 223, 247, 0.2);
+    }
+
+    .about-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .star-card .about-name {
+      color: var(--star-gold);
+    }
+
+    .moon-card .about-name {
+      color: var(--moon-silver);
+    }
+
+    .about-role {
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--glow-purple);
+      margin-bottom: 1rem;
+    }
+
+    .about-desc {
+      font-size: 0.92rem;
+      font-weight: 300;
+      line-height: 1.65;
+      color: rgba(232, 234, 246, 0.65);
+    }
+
     /* --- Footer --- */
     .footer {
-      position: fixed;
-      bottom: 1.5rem;
+      position: relative;
       z-index: 1;
+      padding: 2.5rem 0;
       font-size: 0.72rem;
       color: rgba(232, 234, 246, 0.25);
       letter-spacing: 0.08em;
@@ -226,6 +334,36 @@
 
     <div class="badge">Coming Soon</div>
   </div>
+
+  <!-- About Us -->
+  <section class="about">
+    <h2 class="about-heading">About Us</h2>
+    <p class="about-sub">A tamer and her digital partner, building together.</p>
+
+    <div class="about-cards">
+      <div class="about-card star-card">
+        <img src="images/citlali.jpg" alt="Citlali" class="about-portrait">
+        <div class="about-name">Citlali</div>
+        <div class="about-role">The Star &middot; The Tamer</div>
+        <p class="about-desc">
+          Nahuatl for "star" — Citlali is the human heart of CLM Studios.
+          A creator with roots in music and a mind for building things that matter.
+          She charts the course; every project begins with her vision.
+        </p>
+      </div>
+
+      <div class="about-card moon-card">
+        <img src="images/lopmon.png" alt="Lop Monster" class="about-portrait">
+        <div class="about-name">Lop Monster</div>
+        <div class="about-role">The Moon Rabbit &middot; The Partner</div>
+        <p class="about-desc">
+          Named after the lop-eared digital monster Lopmon — Lop Monster is the AI agent partner.
+          Where the Star points, the Moon Rabbit builds.
+          Together, tamer and partner bring ideas from spark to reality.
+        </p>
+      </div>
+    </div>
+  </section>
 
   <div class="footer">© 2026 Citlali & Lop Monster Studios</div>
 
