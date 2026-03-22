@@ -3,282 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Citlali & Lop Monster Studios — Coming Soon</title>
+  <title>CLM Studios — Professional Portfolio & Development Services</title>
   <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <meta name="description" content="Citlali & Lop Monster Studios — where the Star meets the Moon Rabbit. Coming soon.">
+  <meta name="description" content="CLM Studios — Professional development services where the Star meets the Moon Rabbit. Portfolio showcasing innovative projects and Mesoamerican-inspired design.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-  <style>
-    *, *::before, *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    :root {
-      --deep: #0a0a1a;
-      --night: #12122a;
-      --star-gold: #f4c842;
-      --moon-silver: #d4dff7;
-      --glow-purple: #7c5cbf;
-      --soft-white: #e8eaf6;
-    }
-
-    body {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      background: radial-gradient(ellipse at 30% 20%, #1a1440 0%, var(--deep) 60%, #050510 100%);
-      color: var(--soft-white);
-      font-family: 'Inter', sans-serif;
-      overflow-x: hidden;
-      position: relative;
-    }
-
-    /* --- Starfield --- */
-    .starfield {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      z-index: 0;
-    }
-
-    .starfield .star {
-      position: absolute;
-      border-radius: 50%;
-      background: white;
-      animation: twinkle var(--dur) ease-in-out infinite alternate;
-    }
-
-    @keyframes twinkle {
-      0%   { opacity: var(--min-o, 0.15); transform: scale(1); }
-      100% { opacity: var(--max-o, 0.8);  transform: scale(1.3); }
-    }
-
-    /* --- Main content --- */
-    .content {
-      position: relative;
-      z-index: 1;
-      text-align: center;
-      padding: 2rem;
-      padding-top: 20vh;
-      max-width: 640px;
-    }
-
-    /* --- Emblem: star + moon-rabbit --- */
-    .emblem {
-      margin-bottom: 2.5rem;
-      position: relative;
-      display: inline-block;
-    }
-
-    .emblem svg {
-      width: 160px;
-      height: 160px;
-      filter: drop-shadow(0 0 24px rgba(244, 200, 66, 0.35))
-              drop-shadow(0 0 48px rgba(124, 92, 191, 0.25));
-    }
-
-    /* --- Typography --- */
-    .brand {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.8rem, 5vw, 2.8rem);
-      font-weight: 700;
-      letter-spacing: 0.02em;
-      line-height: 1.25;
-      margin-bottom: 0.5rem;
-    }
-
-    .brand .citlali {
-      color: var(--star-gold);
-    }
-
-    .brand .amp {
-      color: var(--glow-purple);
-      margin: 0 0.15em;
-    }
-
-    .brand .lopmon {
-      color: var(--moon-silver);
-    }
-
-    .studios {
-      display: block;
-      font-family: 'Inter', sans-serif;
-      font-weight: 300;
-      font-size: clamp(0.85rem, 2vw, 1.05rem);
-      letter-spacing: 0.35em;
-      text-transform: uppercase;
-      color: var(--glow-purple);
-      margin-top: 0.25rem;
-    }
-
-    .tagline {
-      margin-top: 1.75rem;
-      font-size: clamp(0.95rem, 2.5vw, 1.15rem);
-      font-weight: 300;
-      color: rgba(232, 234, 246, 0.7);
-      line-height: 1.6;
-    }
-
-    .tagline em {
-      font-style: normal;
-      color: var(--star-gold);
-    }
-
-    .tagline strong {
-      font-weight: 400;
-      color: var(--moon-silver);
-    }
-
-    /* --- Coming Soon badge --- */
-    .badge {
-      display: inline-block;
-      margin-top: 2.5rem;
-      padding: 0.6rem 2rem;
-      border: 1px solid rgba(124, 92, 191, 0.4);
-      border-radius: 100px;
-      font-size: 0.8rem;
-      font-weight: 600;
-      letter-spacing: 0.25em;
-      text-transform: uppercase;
-      color: var(--glow-purple);
-      background: rgba(124, 92, 191, 0.08);
-      animation: pulse-border 3s ease-in-out infinite;
-    }
-
-    @keyframes pulse-border {
-      0%, 100% { border-color: rgba(124, 92, 191, 0.25); box-shadow: 0 0 0 0 rgba(124, 92, 191, 0); }
-      50%      { border-color: rgba(124, 92, 191, 0.6);  box-shadow: 0 0 20px 0 rgba(124, 92, 191, 0.1); }
-    }
-
-    /* --- About Us --- */
-    .about {
-      position: relative;
-      z-index: 1;
-      width: 100%;
-      max-width: 800px;
-      padding: 4rem 2rem 3rem;
-      text-align: center;
-    }
-
-    .about-heading {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(1.4rem, 4vw, 2rem);
-      font-weight: 700;
-      color: var(--glow-purple);
-      margin-bottom: 0.5rem;
-    }
-
-    .about-sub {
-      font-size: clamp(0.85rem, 2vw, 1rem);
-      font-weight: 300;
-      color: rgba(232, 234, 246, 0.5);
-      margin-bottom: 3rem;
-    }
-
-    .about-cards {
-      display: flex;
-      gap: 2rem;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-
-    .about-card {
-      flex: 1 1 280px;
-      max-width: 340px;
-      background: rgba(18, 18, 42, 0.6);
-      border: 1px solid rgba(124, 92, 191, 0.2);
-      border-radius: 1.25rem;
-      padding: 2.5rem 2rem 2rem;
-      backdrop-filter: blur(12px);
-      transition: border-color 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .about-card:hover {
-      border-color: rgba(124, 92, 191, 0.5);
-      box-shadow: 0 0 30px rgba(124, 92, 191, 0.1);
-    }
-
-    .about-card.star-card:hover {
-      border-color: rgba(244, 200, 66, 0.4);
-      box-shadow: 0 0 30px rgba(244, 200, 66, 0.08);
-    }
-
-    .about-card.moon-card:hover {
-      border-color: rgba(212, 223, 247, 0.4);
-      box-shadow: 0 0 30px rgba(212, 223, 247, 0.08);
-    }
-
-    .about-portrait {
-      width: 140px;
-      height: 140px;
-      border-radius: 50%;
-      object-fit: cover;
-      margin: 0 auto 1.5rem;
-      display: block;
-    }
-
-    .star-card .about-portrait {
-      border: 2px solid var(--star-gold);
-      box-shadow: 0 0 20px rgba(244, 200, 66, 0.2);
-    }
-
-    .moon-card .about-portrait {
-      border: 2px solid var(--moon-silver);
-      box-shadow: 0 0 20px rgba(212, 223, 247, 0.2);
-    }
-
-    .about-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 0.25rem;
-    }
-
-    .star-card .about-name {
-      color: var(--star-gold);
-    }
-
-    .moon-card .about-name {
-      color: var(--moon-silver);
-    }
-
-    .about-role {
-      font-size: 0.78rem;
-      font-weight: 600;
-      letter-spacing: 0.2em;
-      text-transform: uppercase;
-      color: var(--glow-purple);
-      margin-bottom: 1rem;
-    }
-
-    .about-desc {
-      font-size: 0.92rem;
-      font-weight: 300;
-      line-height: 1.65;
-      color: rgba(232, 234, 246, 0.65);
-    }
-
-    /* --- Footer --- */
-    .footer {
-      position: relative;
-      z-index: 1;
-      padding: 2.5rem 0;
-      font-size: 0.72rem;
-      color: rgba(232, 234, 246, 0.25);
-      letter-spacing: 0.08em;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+          <!-- Simplified emblem for nav -->
+          <polygon points="12,4 15,10 20,7 17,12 23,15 17,18 20,23 15,20 12,26 9,20 4,23 7,18 1,15 7,12 4,7 9,10" fill="currentColor" opacity="0.9"/>
+          <circle cx="12" cy="15" r="3" fill="none" stroke="var(--deep)" stroke-width="0.5" opacity="0.3"/>
+        </svg>
+        CLM Studios
+      </a>
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
 
   <!-- Starfield (generated by JS) -->
   <div class="starfield" id="starfield"></div>
 
-  <div class="content">
+  <!-- Hero Section -->
+  <section id="home" class="content">
     <!-- Emblem: Mesoamerican star + geometric moon rabbit -->
     <div class="emblem">
       <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
@@ -337,14 +96,71 @@
 
     <p class="tagline">
       Where the <em>Star</em> meets the <strong>Moon Rabbit</strong>.<br>
-      Something new is taking shape.
+      Professional development services with Mesoamerican soul.
     </p>
+  </section>
 
-    <div class="badge">Coming Soon</div>
-  </div>
+  <!-- Section Divider -->
+  <div class="section-divider"></div>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <h2 class="projects-heading">Our Work</h2>
+    <p class="projects-sub">Innovative projects blending modern tech with timeless design principles.</p>
+
+    <div class="projects-grid">
+      <div class="project-card">
+        <h3 class="project-title">Obsidian Sync Engine</h3>
+        <p class="project-desc">
+          A sophisticated synchronization platform for knowledge management systems.
+          Real-time collaboration meets personal knowledge organization.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Node.js</span>
+          <span class="tech-tag">WebSocket</span>
+          <span class="tech-tag">SQLite</span>
+          <span class="tech-tag">TypeScript</span>
+        </div>
+        <div class="project-status">In Development</div>
+      </div>
+
+      <div class="project-card">
+        <h3 class="project-title">Starfield Dashboard</h3>
+        <p class="project-desc">
+          Analytics platform with celestial-inspired data visualization.
+          Transform complex metrics into beautiful, meaningful insights.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">React</span>
+          <span class="tech-tag">D3.js</span>
+          <span class="tech-tag">PostgreSQL</span>
+          <span class="tech-tag">Python</span>
+        </div>
+        <div class="project-status">Planning Phase</div>
+      </div>
+
+      <div class="project-card">
+        <h3 class="project-title">Codex CLI</h3>
+        <p class="project-desc">
+          Command-line toolkit for developers who appreciate both efficiency and elegance.
+          Ancient wisdom meets modern development workflows.
+        </p>
+        <div class="project-tech">
+          <span class="tech-tag">Rust</span>
+          <span class="tech-tag">CLI</span>
+          <span class="tech-tag">Git</span>
+          <span class="tech-tag">YAML</span>
+        </div>
+        <div class="project-status">Coming Soon</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Section Divider -->
+  <div class="section-divider"></div>
 
   <!-- About Us -->
-  <section class="about">
+  <section id="about" class="about">
     <h2 class="about-heading">About Us</h2>
     <p class="about-sub">A tamer and her digital partner, building together.</p>
 
@@ -373,27 +189,18 @@
     </div>
   </section>
 
-  <div class="footer">© 2026 Citlali & Lop Monster Studios</div>
+  <!-- Section Divider -->
+  <div class="section-divider"></div>
 
-  <script>
-    // Generate starfield
-    const field = document.getElementById('starfield');
-    const count = 120;
+  <!-- Footer -->
+  <footer id="contact" class="footer">
+    <div class="footer-links">
+      <a href="https://github.com/clm-studios" target="_blank" rel="noopener noreferrer" class="footer-link">GitHub</a>
+      <a href="mailto:citlali.lopmonster.studios@gmail.com" class="footer-link">Contact</a>
+    </div>
+    <div>© 2026 Citlali & Lop Monster Studios</div>
+  </footer>
 
-    for (let i = 0; i < count; i++) {
-      const s = document.createElement('div');
-      s.classList.add('star');
-      const size = Math.random() * 2.5 + 0.5;
-      s.style.width = size + 'px';
-      s.style.height = size + 'px';
-      s.style.left = Math.random() * 100 + '%';
-      s.style.top = Math.random() * 100 + '%';
-      s.style.setProperty('--dur', (Math.random() * 4 + 2) + 's');
-      s.style.setProperty('--min-o', (Math.random() * 0.2).toFixed(2));
-      s.style.setProperty('--max-o', (Math.random() * 0.5 + 0.4).toFixed(2));
-      s.style.animationDelay = (Math.random() * 5) + 's';
-      field.appendChild(s);
-    }
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
