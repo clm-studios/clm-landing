@@ -4,6 +4,41 @@ All coding sessions for this project are logged here.
 
 ---
 
+## Session 7 — 2026-03-23
+
+**Goal:** MAJOR REDESIGN - Revert to original dark starfield aesthetic (commit 3dd9c47) while keeping current file structure and sections, but replace SVG logos with actual image files
+
+**Requirements:**
+- Revert STYLE to original dark starfield background and colors
+- Keep current file structure (separate styles.css, script.js)
+- Keep About Us and Projects sections but restyle for dark theme
+- Replace SVG logos with actual image files:
+  - images/citlali-codex.jpg (Nahuatl star glyph)
+  - images/tochtli-stone.jpg (stone-carved rabbit)
+- Commit and push when done
+
+**Progress:**
+- ✅ Analyzed original design from commit 3dd9c47 (dark starfield, elegant typography)
+- ✅ Analyzed current structure (nav, hero, projects, about us, footer)
+- ✅ Verified image files exist (citlali-codex.jpg 37KB, tochtli-stone.jpg 236KB)
+- ✅ Updated index.html to replace SVG with image tags
+  - Navigation logo: dual images side by side
+  - Main emblem: dual images with styling
+  - Added "Portfolio Live" badge
+  - Reverted tagline to original simple version
+- ✅ Updated styles.css to original dark starfield colors and aesthetic
+  - Reverted CSS variables to original colors
+  - Updated background to original radial gradient
+  - Added styling for image logos (nav and emblem)
+  - Updated all colors throughout (nav, projects, about, footer)
+- ✅ Restyled Projects and About Us sections for dark theme
+  - Projects: purple/gold color scheme with starfield backgrounds
+  - About Us: matching dark theme with purple accents
+  - Section dividers: original gradient colors
+- [ ] Test design and commit changes
+
+---
+
 ## Session 6 — 2026-03-23
 
 **Goal:** Redesign landing page with simplified authentic Nahuatl glyphs based on reference images and update color scheme to authentic Mesoamerican codex colors

@@ -17,36 +17,10 @@
   <nav class="nav" id="nav">
     <div class="nav-container">
       <a href="#home" class="nav-logo">
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <!-- Simplified Authentic Nahuatl Glyphs -->
-
-          <!-- CITLALI - The Star Eye (simplified from reference) -->
-          <g transform="translate(-1, 0)">
-            <!-- Main circle -->
-            <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2" opacity="0.9"/>
-
-            <!-- Horizontal line through upper portion -->
-            <line x1="4" y1="8" x2="20" y2="8" stroke="currentColor" stroke-width="2" opacity="0.9"/>
-
-            <!-- Half-circle eye shape below -->
-            <path d="M8,12 Q12,16 16,12" fill="none" stroke="currentColor" stroke-width="2" opacity="0.9"/>
-            <circle cx="12" cy="12" r="2" fill="currentColor" opacity="0.8"/>
-            <circle cx="12" cy="12" r="1" fill="white" opacity="1"/>
-          </g>
-
-          <!-- TOCHTLI - The Rabbit (simplified from reference) -->
-          <g transform="translate(8, 3) scale(0.6)">
-            <!-- Rabbit head profile -->
-            <path d="M10,12 L14,8 L16,10 L15,14 L12,16 L8,14 Z" fill="currentColor" opacity="0.7"/>
-
-            <!-- Prominent ears -->
-            <path d="M12,8 L13,2 L15,4 L14,8 Z" fill="currentColor" opacity="0.8"/>
-            <path d="M14,6 L16,0 L18,2 L16,8 Z" fill="currentColor" opacity="0.7"/>
-
-            <!-- Eye -->
-            <circle cx="12" cy="11" r="1" fill="white" opacity="1"/>
-          </g>
-        </svg>
+        <div class="nav-logo-images">
+          <img src="images/citlali-codex.jpg" alt="Citlali Star" class="nav-star">
+          <img src="images/tochtli-stone.jpg" alt="Tochtli Rabbit" class="nav-rabbit">
+        </div>
         CLM Studios
       </a>
       <ul class="nav-menu">
@@ -63,74 +37,12 @@
 
   <!-- Hero Section -->
   <section id="home" class="content">
-    <!-- Emblem: Authentic Nahuatl Glyphs -->
+    <!-- Emblem: Star and Moon Rabbit Images -->
     <div class="emblem">
-      <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
-        <defs>
-          <!-- Simple gradients -->
-          <radialGradient id="citlaliGradient" cx="50%" cy="50%" r="70%">
-            <stop offset="0%" stop-color="var(--codex-turquoise)" stop-opacity="0.8"/>
-            <stop offset="100%" stop-color="var(--codex-red)" stop-opacity="0.6"/>
-          </radialGradient>
-
-          <radialGradient id="tochtliGradient" cx="50%" cy="50%" r="70%">
-            <stop offset="0%" stop-color="var(--codex-cream)" stop-opacity="0.9"/>
-            <stop offset="100%" stop-color="var(--codex-red)" stop-opacity="0.7"/>
-          </radialGradient>
-        </defs>
-
-        <!-- Codex frame (simple) -->
-        <rect x="10" y="10" width="140" height="140" fill="none" stroke="var(--codex-red)" stroke-width="3" opacity="0.8"/>
-
-        <!-- Corner dots (traditional codex style) -->
-        <circle cx="25" cy="25" r="3" fill="var(--codex-turquoise)" opacity="0.8"/>
-        <circle cx="135" cy="25" r="3" fill="var(--codex-turquoise)" opacity="0.8"/>
-        <circle cx="25" cy="135" r="3" fill="var(--codex-turquoise)" opacity="0.8"/>
-        <circle cx="135" cy="135" r="3" fill="var(--codex-turquoise)" opacity="0.8"/>
-        <circle cx="80" cy="25" r="2" fill="var(--codex-red)" opacity="0.7"/>
-
-        <!-- CITLALI — The Star Eye (simplified from reference) -->
-        <g transform="translate(30, 30)">
-          <!-- Main circle -->
-          <circle cx="25" cy="25" r="20" fill="none" stroke="var(--codex-red)" stroke-width="3"/>
-
-          <!-- Horizontal line through upper portion -->
-          <line x1="5" y1="15" x2="45" y2="15" stroke="var(--codex-red)" stroke-width="3"/>
-
-          <!-- Half-circle eye shape below -->
-          <path d="M10,25 Q25,35 40,25" fill="none" stroke="var(--codex-red)" stroke-width="3"/>
-
-          <!-- Eye center -->
-          <circle cx="25" cy="25" r="5" fill="var(--codex-turquoise)" opacity="0.8"/>
-          <circle cx="25" cy="25" r="2" fill="var(--obsidian)"/>
-        </g>
-
-        <!-- TOCHTLI — The Rabbit (simplified from reference) -->
-        <g transform="translate(80, 80)">
-          <!-- Frame around rabbit -->
-          <rect x="0" y="0" width="50" height="40" fill="none" stroke="var(--codex-turquoise)" stroke-width="2" opacity="0.7"/>
-
-          <!-- Top dots (like codex reference) -->
-          <circle cx="8" cy="5" r="1.5" fill="var(--codex-turquoise)" opacity="0.6"/>
-          <circle cx="16" cy="5" r="1.5" fill="var(--codex-turquoise)" opacity="0.6"/>
-          <circle cx="24" cy="5" r="1.5" fill="var(--codex-turquoise)" opacity="0.6"/>
-          <circle cx="32" cy="5" r="1.5" fill="var(--codex-turquoise)" opacity="0.6"/>
-          <circle cx="40" cy="5" r="1.5" fill="var(--codex-turquoise)" opacity="0.6"/>
-
-          <!-- Rabbit head (simplified) -->
-          <path d="M12,20 L20,12 L26,16 L24,24 L18,26 Z" fill="var(--codex-cream)" stroke="var(--codex-red)" stroke-width="2"/>
-
-          <!-- Prominent ears -->
-          <path d="M18,12 L20,8 L22,12 Z" fill="var(--codex-cream)" stroke="var(--codex-red)" stroke-width="1.5"/>
-          <path d="M22,10 L25,6 L28,12 Z" fill="var(--codex-cream)" stroke="var(--codex-red)" stroke-width="1.5"/>
-
-          <!-- Eye -->
-          <circle cx="20" cy="18" r="2" fill="var(--obsidian)"/>
-        </g>
-
-        <!-- Central connection -->
-        <line x1="55" y1="55" x2="105" y2="105" stroke="var(--codex-red)" stroke-width="2" opacity="0.6"/>
-      </svg>
+      <div class="emblem-images">
+        <img src="images/citlali-codex.jpg" alt="Citlali - The Star" class="emblem-star">
+        <img src="images/tochtli-stone.jpg" alt="Tochtli - The Moon Rabbit" class="emblem-rabbit">
+      </div>
     </div>
 
     <h1 class="brand">
@@ -140,8 +52,10 @@
 
     <p class="tagline">
       Where the <em>Star</em> meets the <strong>Moon Rabbit</strong>.<br>
-      Professional development services with Mesoamerican soul.
+      Something new is taking shape.
     </p>
+
+    <div class="badge">Portfolio Live</div>
   </section>
 
   <!-- Section Divider -->
