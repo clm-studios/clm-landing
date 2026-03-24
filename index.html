@@ -18,43 +18,33 @@
     <div class="nav-container">
       <a href="#home" class="nav-logo">
         <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <!-- Authentic Nahuatl Glyphs: CITLALI (Star-Eye) & TOCHTLI (Rabbit) -->
+          <!-- Simplified Authentic Nahuatl Glyphs -->
 
-          <!-- CITLALI - The Star Eye (positioned left) -->
-          <g transform="translate(-2, 0)">
-            <!-- Outer star-eye circle -->
-            <circle cx="12" cy="12" r="6" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.9"/>
+          <!-- CITLALI - The Star Eye (simplified from reference) -->
+          <g transform="translate(-1, 0)">
+            <!-- Main circle -->
+            <circle cx="12" cy="12" r="8" fill="none" stroke="currentColor" stroke-width="2" opacity="0.9"/>
 
-            <!-- Four cardinal ray points (angular, codex style) -->
-            <path d="M12,4 L13,7 L12,7.5 L11,7 Z" fill="currentColor" opacity="0.8"/>
-            <path d="M20,12 L17,11 L16.5,12 L17,13 Z" fill="currentColor" opacity="0.8"/>
-            <path d="M12,20 L11,17 L12,16.5 L13,17 Z" fill="currentColor" opacity="0.8"/>
-            <path d="M4,12 L7,13 L7.5,12 L7,11 Z" fill="currentColor" opacity="0.8"/>
+            <!-- Horizontal line through upper portion -->
+            <line x1="4" y1="8" x2="20" y2="8" stroke="currentColor" stroke-width="2" opacity="0.9"/>
 
-            <!-- Eye center with traditional proportions -->
-            <ellipse cx="12" cy="12" rx="3" ry="3.5" fill="currentColor" opacity="0.9"/>
-            <ellipse cx="12" cy="12" rx="2" ry="2.5" fill="white" opacity="1"/>
-            <ellipse cx="12" cy="12" rx="1" ry="1.2" fill="currentColor" opacity="1"/>
+            <!-- Half-circle eye shape below -->
+            <path d="M8,12 Q12,16 16,12" fill="none" stroke="currentColor" stroke-width="2" opacity="0.9"/>
+            <circle cx="12" cy="12" r="2" fill="currentColor" opacity="0.8"/>
+            <circle cx="12" cy="12" r="1" fill="white" opacity="1"/>
           </g>
 
-          <!-- TOCHTLI - The Rabbit (positioned right, smaller) -->
-          <g transform="translate(6, 2) scale(0.7)">
-            <!-- Rabbit head profile (angular, codex style) -->
-            <path d="M12,8 L16,6 L18,8 L17,10 L15,12 L12,13 L10,11 Z" fill="currentColor" opacity="0.8"/>
+          <!-- TOCHTLI - The Rabbit (simplified from reference) -->
+          <g transform="translate(8, 3) scale(0.6)">
+            <!-- Rabbit head profile -->
+            <path d="M10,12 L14,8 L16,10 L15,14 L12,16 L8,14 Z" fill="currentColor" opacity="0.7"/>
 
-            <!-- Distinctive long ears -->
-            <path d="M14,6 L15,2 L17,3 L16,6 Z" fill="currentColor" opacity="0.9"/>
-            <path d="M16,5 L18,1 L20,2 L18,6 Z" fill="currentColor" opacity="0.7"/>
+            <!-- Prominent ears -->
+            <path d="M12,8 L13,2 L15,4 L14,8 Z" fill="currentColor" opacity="0.8"/>
+            <path d="M14,6 L16,0 L18,2 L16,8 Z" fill="currentColor" opacity="0.7"/>
 
-            <!-- Rabbit body (simplified, geometric) -->
-            <path d="M10,12 L8,14 L9,18 L13,17 L15,15 L14,13 Z" fill="currentColor" opacity="0.6"/>
-
-            <!-- Traditional eye dot -->
-            <circle cx="13" cy="9" r="0.8" fill="white" opacity="1"/>
-
-            <!-- Moon association marks -->
-            <circle cx="19" cy="4" r="0.5" fill="currentColor" opacity="0.6"/>
-            <circle cx="8" cy="16" r="0.4" fill="currentColor" opacity="0.5"/>
+            <!-- Eye -->
+            <circle cx="12" cy="11" r="1" fill="white" opacity="1"/>
           </g>
         </svg>
         CLM Studios
@@ -77,123 +67,69 @@
     <div class="emblem">
       <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
         <defs>
-          <!-- Star-eye gradient -->
+          <!-- Simple gradients -->
           <radialGradient id="citlaliGradient" cx="50%" cy="50%" r="70%">
-            <stop offset="0%" stop-color="var(--star-gold)" stop-opacity="1"/>
-            <stop offset="40%" stop-color="var(--aztec-red)" stop-opacity="0.9"/>
-            <stop offset="80%" stop-color="var(--star-gold)" stop-opacity="0.7"/>
-            <stop offset="100%" stop-color="var(--obsidian)" stop-opacity="0.3"/>
+            <stop offset="0%" stop-color="var(--codex-turquoise)" stop-opacity="0.8"/>
+            <stop offset="100%" stop-color="var(--codex-red)" stop-opacity="0.6"/>
           </radialGradient>
 
-          <!-- Rabbit gradient -->
           <radialGradient id="tochtliGradient" cx="50%" cy="50%" r="70%">
-            <stop offset="0%" stop-color="white" stop-opacity="1"/>
-            <stop offset="30%" stop-color="var(--moon-silver)" stop-opacity="0.9"/>
-            <stop offset="70%" stop-color="var(--obsidian)" stop-opacity="0.6"/>
-            <stop offset="100%" stop-color="var(--aztec-red)" stop-opacity="0.3"/>
+            <stop offset="0%" stop-color="var(--codex-cream)" stop-opacity="0.9"/>
+            <stop offset="100%" stop-color="var(--codex-red)" stop-opacity="0.7"/>
           </radialGradient>
-
-          <!-- Codex pattern -->
-          <pattern id="codexPattern" x="0" y="0" width="8" height="8" patternUnits="userSpaceOnUse">
-            <rect x="0" y="0" width="8" height="8" fill="var(--obsidian)" opacity="0.05"/>
-            <path d="M0,4 L4,0 L8,4 L4,8 Z" fill="var(--aztec-red)" opacity="0.08"/>
-          </pattern>
         </defs>
 
-        <!-- Codex-style foundation -->
-        <rect x="0" y="0" width="160" height="160" fill="url(#codexPattern)" opacity="0.6"/>
-        <rect x="10" y="10" width="140" height="140" fill="none" stroke="var(--obsidian)" stroke-width="2" opacity="0.3"/>
-        <rect x="20" y="20" width="120" height="120" fill="none" stroke="var(--aztec-red)" stroke-width="1" opacity="0.4"/>
+        <!-- Codex frame (simple) -->
+        <rect x="10" y="10" width="140" height="140" fill="none" stroke="var(--codex-red)" stroke-width="3" opacity="0.8"/>
 
-        <!-- ═══ CITLALI — The Star Eye Glyph ═══ -->
-        <g transform="translate(20, 20)">
-          <!-- Outer star circle with angular rays -->
-          <circle cx="40" cy="40" r="32" fill="none" stroke="var(--star-gold)" stroke-width="3" opacity="0.8"/>
+        <!-- Corner dots (traditional codex style) -->
+        <circle cx="25" cy="25" r="3" fill="var(--codex-turquoise)" opacity="0.8"/>
+        <circle cx="135" cy="25" r="3" fill="var(--codex-turquoise)" opacity="0.8"/>
+        <circle cx="25" cy="135" r="3" fill="var(--codex-turquoise)" opacity="0.8"/>
+        <circle cx="135" cy="135" r="3" fill="var(--codex-turquoise)" opacity="0.8"/>
+        <circle cx="80" cy="25" r="2" fill="var(--codex-red)" opacity="0.7"/>
 
-          <!-- Eight angular star rays (codex style) -->
-          <!-- Cardinal directions -->
-          <path d="M40,8 L45,20 L40,24 L35,20 Z" fill="var(--star-gold)" opacity="0.9"/>
-          <path d="M72,40 L60,35 L56,40 L60,45 Z" fill="var(--star-gold)" opacity="0.9"/>
-          <path d="M40,72 L35,60 L40,56 L45,60 Z" fill="var(--star-gold)" opacity="0.9"/>
-          <path d="M8,40 L20,45 L24,40 L20,35 Z" fill="var(--star-gold)" opacity="0.9"/>
+        <!-- CITLALI — The Star Eye (simplified from reference) -->
+        <g transform="translate(30, 30)">
+          <!-- Main circle -->
+          <circle cx="25" cy="25" r="20" fill="none" stroke="var(--codex-red)" stroke-width="3"/>
 
-          <!-- Intercardinal directions -->
-          <path d="M60,20 L55,30 L50,25 L55,15 Z" fill="var(--aztec-red)" opacity="0.8"/>
-          <path d="M60,60 L50,55 L55,50 L65,55 Z" fill="var(--aztec-red)" opacity="0.8"/>
-          <path d="M20,60 L25,50 L30,55 L25,65 Z" fill="var(--aztec-red)" opacity="0.8"/>
-          <path d="M20,20 L30,25 L25,30 L15,25 Z" fill="var(--aztec-red)" opacity="0.8"/>
+          <!-- Horizontal line through upper portion -->
+          <line x1="5" y1="15" x2="45" y2="15" stroke="var(--codex-red)" stroke-width="3"/>
 
-          <!-- The sacred eye (angular, not circular) -->
-          <!-- Outer eye shape - traditional codex angular form -->
-          <path d="M18,40 L30,28 L50,28 L62,40 L50,52 L30,52 Z" fill="url(#citlaliGradient)" opacity="0.95"/>
+          <!-- Half-circle eye shape below -->
+          <path d="M10,25 Q25,35 40,25" fill="none" stroke="var(--codex-red)" stroke-width="3"/>
 
-          <!-- Inner eye -->
-          <path d="M25,40 L32,34 L48,34 L55,40 L48,46 L32,46 Z" fill="white" opacity="0.95"/>
-
-          <!-- Pupil (angular) -->
-          <path d="M35,40 L40,36 L45,40 L40,44 Z" fill="var(--obsidian)" opacity="1"/>
-
-          <!-- Traditional eye decorations -->
-          <path d="M20,35 L28,30 L25,38 Z" fill="var(--aztec-red)" opacity="0.7"/>
-          <path d="M60,35 L52,30 L55,38 Z" fill="var(--aztec-red)" opacity="0.7"/>
-          <path d="M20,45 L28,50 L25,42 Z" fill="var(--aztec-red)" opacity="0.7"/>
-          <path d="M60,45 L52,50 L55,42 Z" fill="var(--aztec-red)" opacity="0.7"/>
+          <!-- Eye center -->
+          <circle cx="25" cy="25" r="5" fill="var(--codex-turquoise)" opacity="0.8"/>
+          <circle cx="25" cy="25" r="2" fill="var(--obsidian)"/>
         </g>
 
-        <!-- ═══ TOCHTLI — The Rabbit Glyph ═══ -->
-        <g transform="translate(90, 90)">
-          <!-- Rabbit head profile (angular codex style) -->
-          <path d="M10,30 L25,15 L45,20 L50,35 L45,45 L30,50 L15,45 L10,35 Z"
-                fill="url(#tochtliGradient)" opacity="0.9"/>
+        <!-- TOCHTLI — The Rabbit (simplified from reference) -->
+        <g transform="translate(80, 80)">
+          <!-- Frame around rabbit -->
+          <rect x="0" y="0" width="50" height="40" fill="none" stroke="var(--codex-turquoise)" stroke-width="2" opacity="0.7"/>
 
-          <!-- Distinctive long ears (Nahuatl style) -->
-          <path d="M25,15 L30,5 L35,2 L38,8 L35,18 L30,20 Z" fill="var(--moon-silver)" opacity="0.9"/>
-          <path d="M35,10 L42,0 L48,3 L50,12 L45,22 L40,18 Z" fill="var(--moon-silver)" opacity="0.8"/>
+          <!-- Top dots (like codex reference) -->
+          <circle cx="8" cy="5" r="1.5" fill="var(--codex-turquoise)" opacity="0.6"/>
+          <circle cx="16" cy="5" r="1.5" fill="var(--codex-turquoise)" opacity="0.6"/>
+          <circle cx="24" cy="5" r="1.5" fill="var(--codex-turquoise)" opacity="0.6"/>
+          <circle cx="32" cy="5" r="1.5" fill="var(--codex-turquoise)" opacity="0.6"/>
+          <circle cx="40" cy="5" r="1.5" fill="var(--codex-turquoise)" opacity="0.6"/>
 
-          <!-- Ear details (traditional patterns) -->
-          <path d="M32,8 L35,6 L38,10 L35,15 Z" fill="var(--obsidian)" opacity="0.5"/>
-          <path d="M44,5 L47,4 L48,8 L45,12 Z" fill="var(--obsidian)" opacity="0.5"/>
+          <!-- Rabbit head (simplified) -->
+          <path d="M12,20 L20,12 L26,16 L24,24 L18,26 Z" fill="var(--codex-cream)" stroke="var(--codex-red)" stroke-width="2"/>
 
-          <!-- Rabbit body (geometric, codex style) -->
-          <path d="M15,40 L8,50 L12,65 L25,68 L40,65 L50,55 L48,45 L35,42 Z"
-                fill="var(--moon-silver)" opacity="0.8"/>
+          <!-- Prominent ears -->
+          <path d="M18,12 L20,8 L22,12 Z" fill="var(--codex-cream)" stroke="var(--codex-red)" stroke-width="1.5"/>
+          <path d="M22,10 L25,6 L28,12 Z" fill="var(--codex-cream)" stroke="var(--codex-red)" stroke-width="1.5"/>
 
-          <!-- Traditional body markings -->
-          <path d="M18,48 L25,52 L22,58 L15,55 Z" fill="var(--obsidian)" opacity="0.4"/>
-          <path d="M30,50 L38,52 L35,60 L28,58 Z" fill="var(--obsidian)" opacity="0.4"/>
-
-          <!-- Rabbit eye (traditional dot) -->
-          <circle cx="28" cy="28" r="3" fill="white" opacity="1"/>
-          <circle cx="28" cy="28" r="1.5" fill="var(--obsidian)" opacity="1"/>
-
-          <!-- Nose and mouth (angular) -->
-          <path d="M40,32 L43,30 L45,35 L42,36 Z" fill="var(--obsidian)" opacity="0.8"/>
-          <path d="M42,36 L45,38 L42,40 Z" fill="var(--obsidian)" opacity="0.6"/>
-
-          <!-- Lunar association symbols -->
-          <circle cx="55" cy="15" r="2" fill="var(--star-gold)" opacity="0.7"/>
-          <path d="M52,10 C56,8 58,12 54,14 Z" fill="var(--moon-silver)" opacity="0.6"/>
-          <circle cx="5" cy="60" r="1.5" fill="var(--star-gold)" opacity="0.6"/>
-
-          <!-- Traditional rabbit foot -->
-          <path d="M12,60 L8,68 L15,72 L22,68 L18,62 Z" fill="var(--moon-silver)" opacity="0.7"/>
+          <!-- Eye -->
+          <circle cx="20" cy="18" r="2" fill="var(--obsidian)"/>
         </g>
 
-        <!-- ═══ Sacred Connection ═══ -->
-        <!-- Angular connecting lines (codex style) -->
-        <path d="M60,60 L80,40 L100,60 L80,80 L60,60"
-              stroke="var(--aztec-red)" stroke-width="2" fill="none" opacity="0.6"/>
-
-        <!-- Corner markers (traditional codex) -->
-        <rect x="5" y="5" width="8" height="8" fill="var(--star-gold)" opacity="0.8"/>
-        <rect x="147" y="5" width="8" height="8" fill="var(--star-gold)" opacity="0.8"/>
-        <rect x="5" y="147" width="8" height="8" fill="var(--moon-silver)" opacity="0.8"/>
-        <rect x="147" y="147" width="8" height="8" fill="var(--moon-silver)" opacity="0.8"/>
-
-        <!-- Central balance point (traditional) -->
-        <path d="M75,75 L85,75 L85,85 L75,85 Z" fill="var(--aztec-red)" opacity="0.8"/>
-        <path d="M77,77 L83,77 L83,83 L77,83 Z" fill="white" opacity="0.9"/>
-        <circle cx="80" cy="80" r="1" fill="var(--obsidian)" opacity="1"/>
+        <!-- Central connection -->
+        <line x1="55" y1="55" x2="105" y2="105" stroke="var(--codex-red)" stroke-width="2" opacity="0.6"/>
       </svg>
     </div>
 

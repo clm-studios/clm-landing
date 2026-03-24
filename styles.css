@@ -8,11 +8,20 @@
   --obsidian: #000000;      /* Pure black - primary dark */
   --deep: #0a0a0a;          /* Near black - subtle depth */
   --night: #1a1a1a;         /* Dark gray - surfaces */
-  --aztec-red: #c41e3a;     /* Rich red - primary accent */
-  --star-gold: #ffd700;     /* Bright gold - star elements */
-  --moon-silver: #ffffff;   /* Pure white - moon elements */
+
+  /* Authentic Mesoamerican Codex Colors */
+  --codex-red: #8B2635;     /* Deep burgundy red from codices */
+  --codex-turquoise: #4A9B8E; /* Authentic turquoise-blue */
+  --codex-cream: #F4F1E8;   /* Cream/off-white from bark paper */
+  --codex-ochre: #D4A574;   /* Golden ochre yellow */
+  --codex-brown: #6B4423;   /* Dark brown for outlines */
+
+  /* Updated harmonious palette */
+  --aztec-red: var(--codex-red);     /* Use authentic codex red */
+  --star-gold: var(--codex-ochre);   /* Use authentic ochre */
+  --moon-silver: var(--codex-cream); /* Use codex cream */
   --soft-white: #f5f5f5;    /* Off-white - secondary text */
-  --aztec-copper: #b87333;  /* Copper accent - Aztec aesthetic */
+  --aztec-copper: #b87333;  /* Keep copper accent */
 }
 
 body {
@@ -21,10 +30,11 @@ body {
   flex-direction: column;
   align-items: center;
   background: radial-gradient(ellipse at 30% 20%,
-    rgba(196, 30, 58, 0.1) 0%,
-    var(--deep) 40%,
+    rgba(74, 155, 142, 0.15) 0%,
+    rgba(107, 68, 35, 0.08) 30%,
+    var(--deep) 60%,
     var(--obsidian) 100%);
-  color: var(--soft-white);
+  color: var(--codex-cream);
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
   position: relative;
@@ -39,7 +49,7 @@ body {
   z-index: 100;
   background: rgba(10, 10, 10, 0.85);
   backdrop-filter: blur(12px);
-  border-bottom: 1px solid rgba(196, 30, 58, 0.1);
+  border-bottom: 1px solid rgba(74, 155, 142, 0.2);
   padding: 0.75rem 0;
   transition: all 0.3s ease;
 }
@@ -57,7 +67,7 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 1.2rem;
   font-weight: 700;
-  color: var(--star-gold);
+  color: var(--codex-ochre);
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -76,7 +86,7 @@ body {
 }
 
 .nav-link {
-  color: var(--soft-white);
+  color: var(--codex-cream);
   text-decoration: none;
   font-weight: 400;
   transition: color 0.3s ease;
@@ -84,7 +94,7 @@ body {
 }
 
 .nav-link:hover {
-  color: var(--star-gold);
+  color: var(--codex-ochre);
 }
 
 .nav-link::after {
@@ -94,7 +104,7 @@ body {
   left: 0;
   width: 0;
   height: 1px;
-  background: var(--star-gold);
+  background: var(--codex-ochre);
   transition: width 0.3s ease;
 }
 
@@ -142,8 +152,8 @@ body {
 .emblem svg {
   width: 120px;
   height: 120px;
-  filter: drop-shadow(0 0 24px rgba(255, 215, 0, 0.35))
-          drop-shadow(0 0 48px rgba(184, 115, 51, 0.25));
+  filter: drop-shadow(0 0 24px rgba(74, 155, 142, 0.4))
+          drop-shadow(0 0 48px rgba(212, 165, 116, 0.3));
 }
 
 /* --- Typography --- */
@@ -157,16 +167,16 @@ body {
 }
 
 .brand .citlali {
-  color: var(--star-gold);
+  color: var(--codex-ochre);
 }
 
 .brand .amp {
-  color: var(--aztec-red);
+  color: var(--codex-red);
   margin: 0 0.15em;
 }
 
 .brand .lopmon {
-  color: var(--moon-silver);
+  color: var(--codex-cream);
 }
 
 .studios {
@@ -176,7 +186,7 @@ body {
   font-size: clamp(0.85rem, 2vw, 1.05rem);
   letter-spacing: 0.35em;
   text-transform: uppercase;
-  color: var(--aztec-red);
+  color: var(--codex-red);
   margin-top: 0.25rem;
 }
 
@@ -190,12 +200,12 @@ body {
 
 .tagline em {
   font-style: normal;
-  color: var(--star-gold);
+  color: var(--codex-ochre);
 }
 
 .tagline strong {
   font-weight: 400;
-  color: var(--moon-silver);
+  color: var(--codex-cream);
 }
 
 /* --- Projects Section --- */
@@ -212,7 +222,7 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: clamp(1.4rem, 4vw, 2rem);
   font-weight: 700;
-  color: var(--aztec-red);
+  color: var(--codex-red);
   margin-bottom: 0.5rem;
 }
 
@@ -232,7 +242,7 @@ body {
 
 .project-card {
   background: rgba(26, 26, 26, 0.6);
-  border: 1px solid rgba(196, 30, 58, 0.2);
+  border: 1px solid rgba(139, 38, 53, 0.3);
   border-radius: 1.25rem;
   padding: 2rem;
   backdrop-filter: blur(12px);
@@ -249,14 +259,14 @@ body {
   left: 0;
   right: 0;
   height: 3px;
-  background: linear-gradient(90deg, var(--star-gold), var(--aztec-red), var(--moon-silver));
+  background: linear-gradient(90deg, var(--codex-ochre), var(--codex-red), var(--codex-turquoise));
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .project-card:hover {
-  border-color: rgba(196, 30, 58, 0.5);
-  box-shadow: 0 8px 40px rgba(255, 215, 0, 0.15);
+  border-color: rgba(74, 155, 142, 0.5);
+  box-shadow: 0 8px 40px rgba(74, 155, 142, 0.2);
   transform: translateY(-4px);
 }
 
@@ -268,7 +278,7 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: 1.3rem;
   font-weight: 700;
-  color: var(--star-gold);
+  color: var(--codex-ochre);
   margin-bottom: 0.5rem;
 }
 
@@ -291,10 +301,10 @@ body {
   font-size: 0.75rem;
   font-weight: 500;
   padding: 0.25rem 0.75rem;
-  background: rgba(196, 30, 58, 0.1);
-  border: 1px solid rgba(196, 30, 58, 0.3);
+  background: rgba(74, 155, 142, 0.1);
+  border: 1px solid rgba(74, 155, 142, 0.4);
   border-radius: 12px;
-  color: var(--aztec-red);
+  color: var(--codex-turquoise);
 }
 
 .project-status {
@@ -302,11 +312,11 @@ body {
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--aztec-red);
+  color: var(--codex-red);
   padding: 0.5rem 1rem;
-  border: 1px solid rgba(196, 30, 58, 0.3);
+  border: 1px solid rgba(139, 38, 53, 0.4);
   border-radius: 20px;
-  background: rgba(196, 30, 58, 0.05);
+  background: rgba(139, 38, 53, 0.08);
   display: inline-block;
 }
 
@@ -324,7 +334,7 @@ body {
   font-family: 'Playfair Display', serif;
   font-size: clamp(1.4rem, 4vw, 2rem);
   font-weight: 700;
-  color: var(--aztec-red);
+  color: var(--codex-red);
   margin-bottom: 0.5rem;
 }
 
@@ -346,7 +356,7 @@ body {
   flex: 1 1 280px;
   max-width: 340px;
   background: rgba(26, 26, 26, 0.6);
-  border: 1px solid rgba(196, 30, 58, 0.2);
+  border: 1px solid rgba(139, 38, 53, 0.3);
   border-radius: 1.25rem;
   padding: 2.5rem 2rem 2rem;
   backdrop-filter: blur(12px);
@@ -354,18 +364,18 @@ body {
 }
 
 .about-card:hover {
-  border-color: rgba(196, 30, 58, 0.5);
-  box-shadow: 0 0 30px rgba(255, 215, 0, 0.1);
+  border-color: rgba(74, 155, 142, 0.5);
+  box-shadow: 0 0 30px rgba(74, 155, 142, 0.15);
 }
 
 .about-card.star-card:hover {
-  border-color: rgba(255, 215, 0, 0.4);
-  box-shadow: 0 0 30px rgba(255, 215, 0, 0.08);
+  border-color: rgba(212, 165, 116, 0.5);
+  box-shadow: 0 0 30px rgba(212, 165, 116, 0.12);
 }
 
 .about-card.moon-card:hover {
-  border-color: rgba(255, 255, 255, 0.4);
-  box-shadow: 0 0 30px rgba(255, 255, 255, 0.08);
+  border-color: rgba(244, 241, 232, 0.4);
+  box-shadow: 0 0 30px rgba(244, 241, 232, 0.08);
 }
 
 .about-portrait {
@@ -378,13 +388,13 @@ body {
 }
 
 .star-card .about-portrait {
-  border: 2px solid var(--star-gold);
-  box-shadow: 0 0 20px rgba(255, 215, 0, 0.2);
+  border: 2px solid var(--codex-ochre);
+  box-shadow: 0 0 20px rgba(212, 165, 116, 0.3);
 }
 
 .moon-card .about-portrait {
-  border: 2px solid var(--moon-silver);
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  border: 2px solid var(--codex-cream);
+  box-shadow: 0 0 20px rgba(244, 241, 232, 0.2);
 }
 
 .about-name {
@@ -395,11 +405,11 @@ body {
 }
 
 .star-card .about-name {
-  color: var(--star-gold);
+  color: var(--codex-ochre);
 }
 
 .moon-card .about-name {
-  color: var(--moon-silver);
+  color: var(--codex-cream);
 }
 
 .about-role {
@@ -407,7 +417,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--aztec-red);
+  color: var(--codex-red);
   margin-bottom: 1rem;
 }
 
@@ -427,11 +437,11 @@ body {
   position: relative;
   background: linear-gradient(90deg,
     transparent 0%,
-    rgba(196, 30, 58, 0.3) 10%,
-    var(--aztec-red) 25%,
-    rgba(255, 215, 0, 0.5) 50%,
-    var(--aztec-red) 75%,
-    rgba(196, 30, 58, 0.3) 90%,
+    rgba(74, 155, 142, 0.3) 10%,
+    var(--codex-turquoise) 25%,
+    rgba(212, 165, 116, 0.6) 50%,
+    var(--codex-red) 75%,
+    rgba(139, 38, 53, 0.3) 90%,
     transparent 100%
   );
 }
@@ -444,7 +454,7 @@ body {
   transform: translateX(-50%);
   width: 12px;
   height: 5px;
-  background: var(--aztec-red);
+  background: var(--codex-red);
   clip-path: polygon(0 0, 25% 0, 50% 100%, 75% 0, 100% 0, 75% 100%, 25% 100%);
 }
 
@@ -471,7 +481,7 @@ body {
 }
 
 .footer-link:hover {
-  color: var(--star-gold);
+  color: var(--codex-ochre);
 }
 
 /* --- Responsive Design --- */
@@ -520,10 +530,10 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-  background: rgba(196, 30, 58, 0.3);
+  background: rgba(74, 155, 142, 0.4);
   border-radius: 4px;
 }
 
 body::-webkit-scrollbar-thumb:hover {
-  background: rgba(196, 30, 58, 0.5);
+  background: rgba(74, 155, 142, 0.6);
 }
